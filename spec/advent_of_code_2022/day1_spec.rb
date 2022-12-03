@@ -18,23 +18,23 @@ RSpec.describe AdventOfCode2022::Day1 do
       expect(described_class.new.part2).to eq(45000)
     end
   end
-end
 
-def entries
-  <<~EOF
-    1000
-    2000
-    3000
+  def entries
+    <<~EOF
+      1000
+      2000
+      3000
 
-    4000
+      4000
 
-    5000
-    6000
+      5000
+      6000
 
-    7000
-    8000
-    9000
+      7000
+      8000
+      9000
 
-    10000
-  EOF
+      10000
+    EOF
+  end
 end

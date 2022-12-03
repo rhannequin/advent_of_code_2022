@@ -18,12 +18,12 @@ RSpec.describe AdventOfCode2022::Day2 do
       expect(described_class.new.part2).to eq(12)
     end
   end
-end
 
-def entries
-  <<~EOF
-    A Y
-    B X
-    C Z
-  EOF
+  def entries
+    <<~EOF
+      A Y
+      B X
+      C Z
+    EOF
+  end
 end

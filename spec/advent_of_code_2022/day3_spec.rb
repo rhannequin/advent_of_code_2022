@@ -18,15 +18,15 @@ RSpec.describe AdventOfCode2022::Day3 do
       expect(described_class.new.part2).to eq(70)
     end
   end
-end
 
-def entries
-  <<~EOF
-    vJrwpWtwJgWrhcsFMMfFFhFp
-    jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
-    PmmdzqPrVvPwwTWBwg
-    wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
-    ttgJtRGJQctTZtZT
-    CrZsJsPPZsGzwwsLwLmpwMDw
-  EOF
+  def entries
+    <<~EOF
+      vJrwpWtwJgWrhcsFMMfFFhFp
+      jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
+      PmmdzqPrVvPwwTWBwg
+      wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
+      ttgJtRGJQctTZtZT
+      CrZsJsPPZsGzwwsLwLmpwMDw
+    EOF
+  end
 end
