@@ -53,7 +53,7 @@ module AdventOfCode2022
       }
     }.freeze
 
-    def part1 # 9177
+    def part1
       raw_data
         .split("\n")
         .map do |round|
@@ -63,7 +63,7 @@ module AdventOfCode2022
         end.sum
     end
 
-    def part2 # 12111
+    def part2
       raw_data
         .split("\n")
         .map do |round|

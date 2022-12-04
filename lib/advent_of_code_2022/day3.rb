@@ -4,7 +4,7 @@ module AdventOfCode2022
   class Day3
     ELVES_BY_GROUP = 3
 
-    def part1 # 8349
+    def part1
       raw_data
         .split
         .map do |rucksack|
@@ -17,7 +17,7 @@ module AdventOfCode2022
       end.sum
     end
 
-    def part2 # 2681
+    def part2
       raw_data
         .split
         .each_slice(ELVES_BY_GROUP)

@@ -2,11 +2,11 @@
 
 module AdventOfCode2022
   class Day1
-    def part1 # 74198
+    def part1
       sums_of_calories.max
     end
 
-    def part2 # 209914
+    def part2
       sums_of_calories
         .sort
         .last(3)

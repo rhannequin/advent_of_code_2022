@@ -2,7 +2,7 @@
 
 module AdventOfCode2022
   class Day4
-    def part1 # 464
+    def part1
       raw_data
         .split
         .count do |assignment_pair|
@@ -17,7 +17,7 @@ module AdventOfCode2022
         end
     end
 
-    def part2 # 770
+    def part2
       raw_data
         .split
         .count do |assignment_pair|

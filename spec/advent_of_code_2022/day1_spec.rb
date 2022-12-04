@@ -8,6 +8,10 @@ RSpec.describe AdventOfCode2022::Day1 do
 
       expect(described_class.new.part1).to eq(24000)
     end
+
+    it "computes the right challenge's answer" do
+      expect(described_class.new.part1).to eq(74198)
+    end
   end
 
   describe "#part2" do
@@ -16,6 +20,10 @@ RSpec.describe AdventOfCode2022::Day1 do
       allow(File).to receive(:read).and_return(data.read)
 
       expect(described_class.new.part2).to eq(45000)
+    end
+
+    it "computes the right challenge's answer" do
+      expect(described_class.new.part2).to eq(209914)
     end
   end
 
