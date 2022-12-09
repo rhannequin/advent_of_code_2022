@@ -3,12 +3,12 @@
 module AdventOfCode2022
   class Day5
     def initialize
-      @raws = raw_data.split("\n")
+      @rows = raw_data.split("\n")
     end
 
     def part1
       stacks = initial_stacks
-      procedures_raws.each do |procedure|
+      procedures_rows.each do |procedure|
         quantity, origin, destination = procedure.scan(/\d+/).map(&:to_i)
         stacks[destination - 1].unshift(*stacks[origin - 1].shift(quantity).reverse)
       end
@@ -18,7 +18,7 @@ module AdventOfCode2022
 
     def part2
       stacks = initial_stacks
-      procedures_raws.each do |procedure|
+      procedures_rows.each do |procedure|
         quantity, origin, destination = procedure.scan(/\d+/).map(&:to_i)
         stacks[destination - 1].unshift(*stacks[origin - 1].shift(quantity))
       end
@@ -35,26 +35,26 @@ module AdventOfCode2022
     end
 
     def raw_number_of_stack_numbers
-      @raws
+      @rows
         .each_index
-        .find { |index| @raws[index].strip[0].match?(/\d/) }
+        .find { |index| @rows[index].strip[0].match?(/\d/) }
     end
 
-    def stack_raws
-      @raws[0...raw_number_of_stack_numbers]
+    def stack_rows
+      @rows[0...raw_number_of_stack_numbers]
     end
 
-    def procedures_raws
-      @raws[(raw_number_of_stack_numbers + 2)..]
+    def procedures_rows
+      @rows[(raw_number_of_stack_numbers + 2)..]
     end
 
     def number_of_stacks
-      @raws[raw_number_of_stack_numbers].strip.split.count
+      @rows[raw_number_of_stack_numbers].strip.split.count
     end
 
     def stack_numbers_with_positions
       numbers_with_positions = {}
-      @raws[raw_number_of_stack_numbers]
+      @rows[raw_number_of_stack_numbers]
         .chars
         .each_with_index do |char, index|
           if char.match?(/[[:digit:]]/)
@@ -66,7 +66,7 @@ module AdventOfCode2022
 
     def initial_stacks
       stacks = []
-      stack_raws.each do |stack_raw|
+      stack_rows.each do |stack_raw|
         (1..number_of_stacks).each do |stack_number|
           crate = stack_raw[stack_numbers_with_positions[stack_number]].strip
 
