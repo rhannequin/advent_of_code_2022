@@ -8,6 +8,7 @@ require "advent_of_code_2022/day5"
 require "advent_of_code_2022/day6"
 require "advent_of_code_2022/day7"
 require "advent_of_code_2022/day8"
+require "advent_of_code_2022/day9"
 require "advent_of_code_2022/version"
 
 module AdventOfCode2022
